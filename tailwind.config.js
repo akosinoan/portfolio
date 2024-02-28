@@ -3,7 +3,11 @@ export default {
   content: ["./index.html",
   "./src/**/*.{js,ts,jsx,tsx}",],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage:{
+        'yosimite': "url('../20190619 yosemite-1.jpg')",
+      }
+    },
   },
   plugins: [],
 }
