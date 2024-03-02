@@ -4,9 +4,7 @@ export default {
   "./src/**/*.{js,ts,jsx,tsx}",],
   theme: {
     extend: {
-      backgroundImage:{
-        'yosimite': "url('./yosemite.jpg')",
-      }
+     
     },
   },
   plugins: [],

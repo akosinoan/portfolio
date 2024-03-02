@@ -3,15 +3,18 @@
 const Header = () =>{
     return (
         <header className='relative'>
-            <div className="absolute h-full w-full bg-yosimite bg-no-repeat bg-cover bg-center bg-fixed -z-50"></div>
+            <div className="absolute h-full w-full -z-50">
+                <img src="./yosemite.jpg" className=" h-full w-full " alt="yosemite-background" />
+
+            </div>
       
             <nav className="flex justify-between items-center h-20 bg-red-950 text-white bg-opacity-90">
                 <div className="px-5">Logo</div>
                
-                <ul className="flex justify-self-end cursor-pointer ">
+                <ul className="flex justify-self-end items-center cursor-pointer ">
                     
                     <NavLink name="About" href="#about" />
-                    <NavLink name="Projects" />
+                    <NavLink name="Past Projects" />
                     <NavLink name="Work History" />
                     <NavLink name="Contact" />
                 </ul>
