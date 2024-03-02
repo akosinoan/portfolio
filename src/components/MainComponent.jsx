@@ -4,10 +4,7 @@ const MainComponent = () => {
     return (
         <main >
             <About />
-            <About />
-            <About />
-            <About />
-            <About />
+           
         </main>
     )
 }
