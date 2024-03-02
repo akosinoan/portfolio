@@ -1,30 +1,68 @@
-
+import { useState } from "react";
 
 const Header = () =>{
+   
+    const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
+    const mobileNavStyle = `flex flex-col ease-in transition-[height] h-[30%] duration-300 justify-evenly items-center absolute w-1/2 border-yellow-200 top-0 left-[45%] z-50 bg-red-950 rounded-b-lg border-2 shadow-xl`;
     return (
         <header className='relative'>
+            <div className="duration-75 transition"></div>
             <div className="absolute h-full w-full -z-50">
                 <img src="./yosemite.jpg" className=" h-full w-full " alt="yosemite-background" />
 
             </div>
       
             <nav className="flex justify-between items-center h-20 bg-red-950 text-white bg-opacity-90">
-                <div className="px-5">Logo</div>
+                <div className="px-5">Logo</div>    
                
-                <ul className="flex justify-self-end items-center cursor-pointer ">
+                <section className="MOBILE-MENU flex lg:hidden">
+                    <div
+                        className="HAMBURGER-ICON space-y-2 mr-10 block pb-2 rounded-lg border-2 animate-pulse"
+                        onClick={() => setIsNavOpen((prev) => !prev)}
+                    >
+                        
+                            <span className="block h-0.5 m-2 w-8 animate-pulse bg-white"></span>
+                            <span className="block h-0.5 m-2 w-8 animate-pulse bg-white"></span>
+                            <span className="block h-0.5 m-2 w-8 animate-pulse bg-white"></span>
+                        
+                    </div>
+
+                    <div className={
+                        isNavOpen ? mobileNavStyle:" invisible h-0 w-0 "}>
+                        <div
+                        className="ml-24 flex-initial flex-row justify-end justify-self-end items-end cursor-pointer rounded-lg border-white border-2 animate-pulse"
+                        onClick={() => setIsNavOpen(false)}
+                        >
+                            <svg
+                                className="h-8 w-8 text-white"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            >
+                                <line x1="18" y1="6" x2="6" y2="18" />
+                                <line x1="6" y1="6" x2="18" y2="18" />
+                            </svg>
+                        </div>
+                        <ul className="flex flex-col items-center justify-self-center">
+                            <NavLinks />
+                        </ul>
+                    </div>
+                </section>
+                <ul className=" hidden lg:flex justify-self-end items-center cursor-pointer ">
                     
-                    <NavLink name="About" href="#about" />
-                    <NavLink name="Past Projects" />
-                    <NavLink name="Work History" />
-                    <NavLink name="Contact" />
+                    <NavLinks />
                 </ul>
                 
             </nav>
+
             <div className=" bg-red-950 bg-opacity-80 ">
                 
                 <div className=" relative z-30 pt-20 pb-12 sm:pt-56 sm:pb-48 lg:pt-64 lg:pb-48">
                     <div className="flex flex-col items-center justify-center lg:flex-row">
-                        <div className="rounded-full border-8 border-primary shadow-xl">
+                        <div className="rounded-full border-8 shadow-xl">
                         <img src="./profpic2.jpg" className=" h-48 w-48 rounded-full sm:h-48" alt="author" />
                         </div>
                         <div className="pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
@@ -53,11 +91,25 @@ const Header = () =>{
                 </div>
             </div>
 
-            
         </header>
     )
 }
 
+const NavLinks = (props) =>{
+
+    const links = [
+        {name:"About",href:"#about"},
+        {name:"Past Projects",href:"#about"},
+        {name:"Work History",href:"#about"},
+        {name:"Contact",href:"#about"}
+    
+    ]
+    return (
+        <>
+            {links.map((link,index) => <NavLink key={index} name={link.name} href={link.href} />)}
+        </>
+    )
+}
 
 const NavLink = (props) =>{
 
