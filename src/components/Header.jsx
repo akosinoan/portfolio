@@ -21,18 +21,16 @@ const Header = () =>{
                         className="HAMBURGER-ICON space-y-2 mr-10 block pb-2 rounded-lg border-2 animate-pulse"
                         onClick={() => setIsNavOpen((prev) => !prev)}
                     >
-                        
                             <span className="block h-0.5 m-2 w-8 animate-pulse bg-white"></span>
                             <span className="block h-0.5 m-2 w-8 animate-pulse bg-white"></span>
                             <span className="block h-0.5 m-2 w-8 animate-pulse bg-white"></span>
-                        
                     </button>
 
                     <div className={ "flex flex-col ease-in transition-[height]  duration-300 justify-evenly items-center absolute w-1/2 border-white top-0 left-[45%] z-50 bg-red-950 rounded-b-3xl border-2 shadow-xl" +
-                        (isNavOpen ? " h-[30%]" : " overflow-hidden h-0 w-0 -top-10") }>
+                        (isNavOpen ? " h-[30%]" : " overflow-hidden h-0 w-0 absolute -top-10") }>
                         <div
-                        className="ml-24 flex-initial flex-row justify-end justify-self-end items-end cursor-pointer rounded-lg border-white border-2 animate-pulse"
-                        onClick={() => setIsNavOpen(false)}
+                            className="ml-24 flex-initial flex-row justify-end justify-self-end items-end cursor-pointer rounded-lg border-white border-2 animate-pulse"
+                            onClick={() => setIsNavOpen(false)}
                         >
                             <svg
                                 className="h-8 w-8 text-white"
@@ -55,8 +53,7 @@ const Header = () =>{
                 <ul className=" hidden lg:flex justify-self-end items-center cursor-pointer ">
                     
                     <NavLinks />
-                </ul>
-                
+                </ul>  
             </nav>
 
             <div className=" bg-red-950 bg-opacity-80 ">
