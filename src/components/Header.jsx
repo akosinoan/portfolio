@@ -3,7 +3,8 @@ import { useState } from "react";
 const Header = () =>{
    
     const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
-    const mobileNavStyle = `flex flex-col ease-in transition-[height] h-[30%] duration-300 justify-evenly items-center absolute w-1/2 border-yellow-200 top-0 left-[45%] z-50 bg-red-950 rounded-b-lg border-2 shadow-xl`;
+
+    
     return (
         <header className='relative'>
             <div className="duration-75 transition"></div>
@@ -15,8 +16,8 @@ const Header = () =>{
             <nav className="flex justify-between items-center h-20 bg-red-950 text-white bg-opacity-90">
                 <div className="px-5">Logo</div>    
                
-                <section className="MOBILE-MENU flex lg:hidden">
-                    <div
+                <section className="MOBILE-MENU  lg:hidden">
+                    <button
                         className="HAMBURGER-ICON space-y-2 mr-10 block pb-2 rounded-lg border-2 animate-pulse"
                         onClick={() => setIsNavOpen((prev) => !prev)}
                     >
@@ -25,10 +26,10 @@ const Header = () =>{
                             <span className="block h-0.5 m-2 w-8 animate-pulse bg-white"></span>
                             <span className="block h-0.5 m-2 w-8 animate-pulse bg-white"></span>
                         
-                    </div>
+                    </button>
 
-                    <div className={
-                        isNavOpen ? mobileNavStyle:" invisible h-0 w-0 "}>
+                    <div className={ "flex flex-col ease-in transition-[height]  duration-300 justify-evenly items-center absolute w-1/2 border-white top-0 left-[45%] z-50 bg-red-950 rounded-b-3xl border-2 shadow-xl" +
+                        (isNavOpen ? " h-[30%]" : " overflow-hidden h-0 w-0 -top-10") }>
                         <div
                         className="ml-24 flex-initial flex-row justify-end justify-self-end items-end cursor-pointer rounded-lg border-white border-2 animate-pulse"
                         onClick={() => setIsNavOpen(false)}
@@ -46,7 +47,7 @@ const Header = () =>{
                                 <line x1="6" y1="6" x2="18" y2="18" />
                             </svg>
                         </div>
-                        <ul className="flex flex-col items-center justify-self-center">
+                        <ul className="flex flex-col items-center justify-self-center w-full">
                             <NavLinks />
                         </ul>
                     </div>
