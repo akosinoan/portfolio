@@ -26,8 +26,8 @@ const Header = () =>{
                             <span className="block h-0.5 m-2 w-8 animate-pulse bg-white"></span>
                     </button>
 
-                    <div className={ "flex flex-col ease-in transition-[height]  duration-300 justify-evenly items-center absolute w-1/2 border-white left-[45%] z-50 bg-red-950 rounded-b-3xl border-2 shadow-xl" +
-                        (isNavOpen ? " h-[30%] top-0" : " overflow-hidden h-0 w-0 -top-10") }>
+                    <div className={ "flex flex-col ease-in transition-all duration-300 justify-evenly items-center absolute  border-white  z-50  bg-red-950 rounded-b-3xl border-2 shadow-xl" +
+                        (isNavOpen ? " h-[30%]  top-0 w-1/2  left-[55%]" : " overflow-hidden h-0 w-0 -top-10 left-[100%]") }>
                         <div
                             className="ml-24 flex-initial flex-row justify-end justify-self-end items-end cursor-pointer rounded-lg border-white border-2 animate-pulse"
                             onClick={() => setIsNavOpen(false)}
@@ -97,7 +97,7 @@ const NavLinks = (props) =>{
 
     const links = [
         {name:"About",href:"#about"},
-        {name:"Past Projects",href:"#about"},
+        {name:"Past Projects",href:"#portfolio"},
         {name:"Work History",href:"#about"},
         {name:"Contact",href:"#about"}
     

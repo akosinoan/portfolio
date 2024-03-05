@@ -5,36 +5,47 @@ const Portfolio = () =>{
                 Check out my Portfolio
             </h2>
             <h3 className="pt-6 font-header text-center text-xl font-medium text-black sm:text-2xl lg:text-3xl">
-                Here are projects I have done in the past
+                Here are my previous Projects
             </h3>
 
             <div className="mx-auto grid w-full grid-cols-1 gap-8 pt-12 sm:w-3/4 md:gap-10 lg:w-full lg:grid-cols-2">
-                <div className="mx-auto transform transition-all hover:scale-105 md:mx-0">
-                    <a href="https://www.baristacoffeebeans.com/" target="_blank" >
-                        <img src="./baristascreenshot.png" className="w-full lg:h-[70%] shadow" alt="portfolio image" />
-                        
-                    </a>
-                    <div className="flex flex-col">
-                    <h4 className=" font-header  font-medium text-red-900 sm:text-md lg:text-lg">
-                        Technologies used:
-                    </h4>
-                            <ul className="flex">
-                                <TechnologyList technologies={["NextJS","React","Bootstrap","CSS"]} />
-                                
-                            </ul>
-                        </div>
-                </div>
-                <a href="/" className="mx-auto transform transition-all hover:scale-105 md:mx-0">
-                    <img src="./yosemite.jpg" className="w-full shadow" alt="portfolio image" />
-                </a>
-                <a href="/" className="mx-auto transform transition-all hover:scale-105 md:mx-0">
-                    <img src="./yosemite.jpg" className="w-full shadow" alt="portfolio image" />
-                </a>
-                <a href="/" className="mx-auto transform transition-all hover:scale-105 md:mx-0">
-                    <img src="./yosemite.jpg" className="w-full shadow" alt="portfolio image" />
-                </a>
+            
+                <Project name="Barista Coffee Beans - Static Web Page" href="https://www.baristacoffeebeans.com/" imgsrc="./baristascreenshot.png" technologies={["NextJS","React","Bootstrap","CSS"]} />
+               
+                <Project name="Barista Coffee Beans - Static Web Page" href="https://www.baristacoffeebeans.com/" imgsrc="./baristascreenshot.png" technologies={["NextJS","React","Bootstrap","CSS"]} />
+                
+                <Project name="Barista Coffee Beans - Static Web Page" href="https://www.baristacoffeebeans.com/" imgsrc="./baristascreenshot.png" technologies={["NextJS","React","Bootstrap","CSS"]} />
+                
+                <Project name="Barista Coffee Beans - Static Web Page" href="https://www.baristacoffeebeans.com/" imgsrc="./baristascreenshot.png" technologies={["NextJS","React","Bootstrap","CSS"]} />
+
             </div>
+            
         </div>
+    )
+}
+
+const Project = (props) =>{
+    return ( 
+    <>
+        
+        <div className="mx-auto transform transition-all hover:scale-105 md:mx-0 py-2">          
+            <a href={props.href} target="_blank" >
+                <h3 className="font-bold text-red-900 sm:text-md lg:text-lg">{props.name}</h3>
+                <img src={props.imgsrc} className="w-full lg:h-[70%] shadow z-10" alt={props.name} />
+            </a>
+            <div className="flex flex-col">
+                <h4 className="font-medium text-red-900 sm:text-md lg:text-lg">
+                    Technologies used:
+                </h4>
+                <ul className="flex">
+                    <TechnologyList technologies={props.technologies} />
+                </ul>
+            </div>
+            
+        </div>
+        
+        <hr className="lg:hidden"/>
+    </>
     )
 }
 
@@ -54,7 +65,10 @@ const TechnologyList = (props) =>{
 
 const Technology = (props) =>{
     return (
-        <li className="px-2 group"><a href={props.href} target="_blank"><img src={props.imgsrc} alt={props.name}/> <span className="group-hover:visible absolute text-xs invisible border-2 border-gray-300 rounded-3xl p-2 bg-red-900 text-white ">{props.name}</span></a></li>
+        <>
+        <li className="px-2 group"><a href={props.href} target="_blank"><img src={props.imgsrc} alt={props.name}/> <span className="group-hover:visible absolute text-xs invisible  border-2 border-gray-300 rounded-3xl p-2 bg-red-900 text-white ">{props.name}</span></a></li>
+        
+        </>
     )
 }
 

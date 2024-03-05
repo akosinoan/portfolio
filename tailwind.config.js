@@ -12,7 +12,10 @@ export default {
       },
       animation: {
         wiggle: "wiggle 200ms ease-in-out"
-      }
+      },
+      transitionProperty: {
+        'width': 'width'
+    }
     },
   },
   plugins: [],
