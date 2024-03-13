@@ -1,6 +1,12 @@
+
+
 const About = () =>{
+    
+  
+
+
     return (
-        <section className="bg-gray-200" id="about">
+        <section className="bg-gray-200 scroll-mt-20" id="about">
             
 
             <div className=" flex flex-col mx-10  py-16 md:py-20 lg:flex-row items-center lg:justify-center ">

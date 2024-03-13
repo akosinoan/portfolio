@@ -1,6 +1,10 @@
+
+
 const Portfolio = () =>{
+    
+
     return(
-        <div className=" py-16 md:py-20 mx-[10%] lg:mx-[20%]"  id="portfolio">
+        <section className="scroll-mt-20 py-16 md:py-20 mx-[10%] lg:mx-[20%]"  id="portfolio">
             <h2 className="text-red-900 text-center text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
                 Check out my Portfolio
             </h2>
@@ -20,7 +24,7 @@ const Portfolio = () =>{
 
             </div>
             
-        </div>
+        </section>
     )
 }
 

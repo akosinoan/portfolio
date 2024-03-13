@@ -1,63 +1,20 @@
-import { useState } from "react";
+
+import NavBar from './NavBar'
 
 const Header = () =>{
    
-    const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
-
     
     return (
-        <header className='relative'>
-            <div className="duration-75 transition"></div>
-            <div className="absolute h-full w-full -z-50">
-                <img src="./yosemite.jpg" className=" h-full w-full " alt="yosemite-background" />
+        
+        <header >
+            
+            <NavBar />
 
-            </div>
-      
-            <nav className="flex justify-between items-center h-20 bg-red-950 text-white bg-opacity-90">
-                <div className="px-5">Logo</div>    
-               
-                <section className="MOBILE-MENU  lg:hidden">
-                    <button
-                        className="HAMBURGER-ICON space-y-2 mr-10 block pb-2 rounded-lg border-2 animate-pulse"
-                        onClick={() => setIsNavOpen((prev) => !prev)}
-                    >
-                            <span className="block h-0.5 m-2 w-8 animate-pulse bg-white"></span>
-                            <span className="block h-0.5 m-2 w-8 animate-pulse bg-white"></span>
-                            <span className="block h-0.5 m-2 w-8 animate-pulse bg-white"></span>
-                    </button>
+            <div className=" bg-red-950 bg-opacity-80 relative">
+                <div className="absolute h-full w-full -z-50">
+                        <img src="./yosemite.jpg" className=" h-full w-full " alt="yosemite-background" />
 
-                    <div className={ "flex flex-col ease-in transition-all duration-300 justify-evenly items-center absolute  border-white  z-50  bg-red-950 rounded-b-3xl border-2 shadow-xl" +
-                        (isNavOpen ? " h-[30%]  top-0 w-1/2  left-[55%]" : " overflow-hidden h-0 w-0 -top-10 left-[100%]") }>
-                        <div
-                            className="ml-24 flex-initial flex-row justify-end justify-self-end items-end cursor-pointer rounded-lg border-white border-2 animate-pulse"
-                            onClick={() => setIsNavOpen(false)}
-                        >
-                            <svg
-                                className="h-8 w-8 text-white"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            >
-                                <line x1="18" y1="6" x2="6" y2="18" />
-                                <line x1="6" y1="6" x2="18" y2="18" />
-                            </svg>
-                        </div>
-                        <ul className="flex flex-col items-center justify-self-center w-full">
-                            <NavLinks />
-                        </ul>
                     </div>
-                </section>
-                <ul className=" hidden lg:flex justify-self-end items-center cursor-pointer ">
-                    
-                    <NavLinks />
-                </ul>  
-            </nav>
-
-            <div className=" bg-red-950 bg-opacity-80 ">
-                
                 <div className=" relative z-30 pt-20 pb-12 sm:pt-56 sm:pb-48 lg:pt-64 lg:pb-48">
                     <div className="flex flex-col items-center justify-center lg:flex-row">
                         <div className="rounded-full border-8 shadow-xl">
@@ -88,36 +45,13 @@ const Header = () =>{
                     </div>
                 </div>
             </div>
-
-        </header>
+    </header>
+         
+     
     )
 }
 
-const NavLinks = (props) =>{
 
-    const links = [
-        {name:"About",href:"#about"},
-        {name:"Past Projects",href:"#portfolio"},
-        {name:"Work History",href:"#about"},
-        {name:"Contact",href:"#about"}
-    
-    ]
-    return (
-        <>
-            {links.map((link,index) => <NavLink key={index} name={link.name} href={link.href} />)}
-        </>
-    )
-}
-
-const NavLink = (props) =>{
-
-    return (
-        <li className="group pr-5">
-            <span className=" group-hover:text-yellow-200 active:text-yellow-200"> <a href={props.href}>{props.name}</a></span>
-            <span className="block h-0.5 w-full bg-transparent group-hover:bg-yellow-200 active:bg-yellow-200"></span>
-        </li>
-    )
-}
 
 const ContactLink = (props) => {
     return (

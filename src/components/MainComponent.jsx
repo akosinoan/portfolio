@@ -3,7 +3,7 @@ import Portfolio from './Portfolio';
 
 const MainComponent = () => {
     return (
-        <main >
+        <main className='' >
             <About />
             <Portfolio />
         </main>
