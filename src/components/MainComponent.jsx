@@ -12,13 +12,8 @@ const MainComponent = () => {
     
     return (
         <main className='' >
-                
-            
            <About />
-           <Portfolio />
-            
-            <WiggleButton/>
-          
+           <Portfolio />   
         </main>
     )
 }
