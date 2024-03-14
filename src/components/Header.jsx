@@ -10,7 +10,7 @@ const Header = () =>{
             
             <NavBar />
 
-            <div className=" bg-red-950 bg-opacity-80 relative">
+            <div className="mt-20 bg-red-950 bg-opacity-80 relative">
                 <div className="absolute h-full w-full -z-50">
                         <img src="./yosemite.jpg" className=" h-full w-full " alt="yosemite-background" />
 

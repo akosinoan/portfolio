@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.onScrollAnimate{
+ 
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+    position: relative;
+}
+
+
+.flyIn{
+    animation: fly-in linear both;
+    animation-timeline: view(block);
+    animation-range: entry 0% cover 50%;
+}

@@ -50,7 +50,7 @@ const NavBar = () =>{
                                 <span className="block h-0.5 m-2 w-8 animate-pulse bg-white"></span>
                         </button>
 
-                        <div id="mobile-nav" className={ "flex flex-col w-1/2 py-4 ease-in transition-all duration-500 delay-75 justify-evenly items-center absolute  border-white  z-50  bg-red-950 rounded-b-3xl border-2 shadow-xl" +
+                        <div id="mobile-nav" className={ "flex flex-col w-1/2 py-4 ease-in transition-all duration-300 delay-75 justify-evenly items-center absolute  border-white  z-50  bg-red-950 rounded-b-3xl border-2 shadow-xl" +
                             (isNavOpen ? " z-50 top-0 left-[55%] opacity-100" : "invisible -z-50 -top-10 left-[100%] opacity-0") }>
                             <div
                                 className="ml-24  cursor-pointer rounded-lg border-white border-2 animate-pulse"
