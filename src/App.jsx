@@ -13,7 +13,11 @@ const App =() =>{
         <Header />
         <MainComponent />
         <Footer />
+        
+        
       </ActiveNavContext.Provider>
+      <iframe src="https://app.cloudpano.com/tours/BZwg9XPIt" name="iframe" height={`500px`}> </iframe>
+      
     </div>
   )
 }
