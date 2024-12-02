@@ -16,7 +16,6 @@ const App =() =>{
         
         
       </ActiveNavContext.Provider>
-      <iframe src="https://app.cloudpano.com/tours/BZwg9XPIt" name="iframe" height={`500px`}> </iframe>
       
     </div>
   )
