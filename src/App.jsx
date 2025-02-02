@@ -8,16 +8,17 @@ const App =() =>{
   const [activeNav , setActiveNav]=useState('Home');
     
   return (
-    <div className='max-h flex flex-col'>
-      <ActiveNavContext.Provider value={[activeNav , setActiveNav]}  >
-        <Header />
-        <MainComponent />
-        <Footer />
+    <div> TEST </div>
+    // <div className='max-h flex flex-col'>
+    //   <ActiveNavContext.Provider value={[activeNav , setActiveNav]}  >
+    //     <Header />
+    //     <MainComponent />
+    //     <Footer />
         
         
-      </ActiveNavContext.Provider>
+    //   </ActiveNavContext.Provider>
       
-    </div>
+    // </div>
   )
 }
 
