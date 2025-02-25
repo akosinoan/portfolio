@@ -4,8 +4,10 @@ import useIsVisible from "../util/useIsVisible";
 const WorkHistory = () =>{
      /* Refs for animation*/ 
     const ref1 = useRef();
+    const ref2 = useRef();
+    
     const isVisible1 = useIsVisible(ref1);
-
+    const isVisible2 = useIsVisible(ref2);
     
     //Work Experience Data
     const workExperiences = [
@@ -26,7 +28,7 @@ const WorkHistory = () =>{
                     </h2>
                 </div>
             
-            <div >
+            <div ref={ref2} className={`relative ${(isVisible2 ? "animate-fadeLeftToRight" : "opacity-0")} `} >
                 <ol  className={` lg:list-none list-disc lg:grid lg:grid-cols-2 sm:flex sm:flex-col px-10  py-16 sm:py-20 items-center`}>  
                     
                 {workExperiences.map((workExperience,index) => <WorkExperience key={index} index={index} name={workExperience.name} position={workExperience.position} date={workExperience.date} desc={workExperience.desc }   duration={workExperience.duration} />)}
