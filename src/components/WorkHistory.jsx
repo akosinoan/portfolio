@@ -11,10 +11,10 @@ const WorkHistory = () =>{
     
     //Work Experience Data
     const workExperiences = [
-        {name:"SSE", position:"Subject Matter Expert" ,date:"Jan 2021 - Apr 2024 · 3 yrs 4 mos", desc: "Description"},
-        {name:"US Navy", position:"Aviation Structural Mechanic" ,date:"Dec 2015 - Dec 2019 · 4 yrs", desc: "Description"},
-        {name:"Intevalue Services Inc.", position:"Java Web Developer" ,date:"2012 - 2015 · 3 yrs", desc: "Description"},
-        {name:"Manila Cordage Company", position:"PHP Web Developer (Intern)" ,date:"May 2011 - Jul 2011 · 3 mos", desc: "Description"},
+        {name:"SSE", position:"Subject Matter Expert" ,date:"Jan 2021 - Apr 2024", duration:"3 yrs 4 mos", desc: "Description"},
+        {name:"US Navy", position:"Aviation Structural Mechanic" ,date:"Dec 2015 - Dec 2019", duration:"4 yrs", desc: "Description"},
+        {name:"Intevalue Services Inc.", position:"Java Web Developer" ,date:"2012 - 2015 ", duration:"3 yrs", desc: "Description"},
+        {name:"Manila Cordage Company", position:"PHP Web Developer (Intern)" ,date:"May 2011 - Jul 2011 ", duration:"3 mos", desc: "Description"},
         
     ];
 
@@ -31,7 +31,7 @@ const WorkHistory = () =>{
             <div ref={ref2} className={`relative ${(isVisible2 ? "animate-fadeLeftToRight" : "opacity-0")} `} >
                 <ol  className={` lg:list-none sm:list-disc lg:grid lg:grid-cols-2 sm:flex sm:flex-col px-10  py-16 sm:py-20 items-center`}>  
                     
-                {workExperiences.map((workExperience,index) => <WorkExperience key={index} index={index} name={workExperience.name} position={workExperience.position} date={workExperience.date} desc={workExperience.desc} />)}
+                {workExperiences.map((workExperience,index) => <WorkExperience key={index} index={index} name={workExperience.name} position={workExperience.position} date={workExperience.date} desc={workExperience.desc }   duration={workExperience.duration} />)}
                 
             
                     {/* <li ref={ref2} className={ `lg:w-[40%] lg:mt-28 text-center  lg:text-leftrelative  ${(isVisible2 ? "animate-fadeLeftToRight" : "opacity-0")} `}>
@@ -65,7 +65,7 @@ const WorkExperience = (props) =>{
    
     const isEven = props.index % 2 == 0;
     return (    
-        <li className={ `px-10 border-red-900 lg:w-auto sm:w-1/2  sm:border-l-4  text-left ${isEven ? 'lg:border-r-0 lg:text-right lg:border-0' : 'lg:border-l-4'} `}>
+        <li className={ `px-10 border-red-900 lg:w-auto sm:w-1/2  border-l-4  text-left ${isEven ? 'lg:border-r-0 lg:text-right lg:border-0' : 'lg:border-l-4'} `}>
             <h4 className={`pt-6 ${isEven ? '' : 'lg:mt-56'} font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl`}>
                 {props.logo || 'logo'} 
             </h4>
@@ -78,6 +78,9 @@ const WorkExperience = (props) =>{
             </h4>
             <h3 className={` pt-0 font-header text-xl font-medium text-gray-400 sm:text-2xl lg:text-3xl`}>
                 {props.date}
+            </h3>
+            <h3 className={` pt-0 font-header text-xl font-medium text-gray-400 sm:text-2xl lg:text-3xl`}>
+                {`(${props.duration})`}
             </h3>
             <p className=" pt-6 px-10 font-body leading-relaxed text-gray-400 ">
                 {props.desc}
