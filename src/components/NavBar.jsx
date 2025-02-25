@@ -10,8 +10,8 @@ const NavBar = () =>{
     const links = [
         {name:"About",id:"about",},
         {name:"Past Projects",id:"portfolio", },
-        {name:"Work History",id:"home"},
-        {name:"Contact",id:"home"}
+        // {name:"Work History",id:"home"},
+        // {name:"Contact",id:"home"}
     ];
 
     const handleScroll= (e) =>{  
@@ -37,7 +37,7 @@ const NavBar = () =>{
             <div className="fixed top-0 z-50 w-full">
             <NavOpenContext.Provider value={[isNavOpen,setIsNavOpen]} >
             <nav className="flex justify-between items-center h-20 bg-red-950 text-white">
-                <div className="px-5" ><a href="#home">Logo</a> </div>    
+                <div className="px-5" ><a href="#home"><img src="./noanworks.svg" className=" h-10 w-10 sm:h-10" alt="author" /></a> </div>    
                 
                 
                     <section className="MOBILE-MENU  lg:hidden">

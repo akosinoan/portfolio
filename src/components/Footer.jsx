@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <footer className="flex justify-center text-sm">© 2024 Noanworks Development</footer>
+        <footer className="flex justify-center text-sm">© 2025 Noanworks Development</footer>
     )
 }
 

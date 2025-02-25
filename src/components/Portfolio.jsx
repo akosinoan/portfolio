@@ -22,12 +22,13 @@ const Portfolio = () =>{
             <div className="mx-auto grid w-full grid-cols-1 gap-8 pt-12 sm:w-3/4 md:gap-10 lg:w-full lg:grid-cols-2">
             
                 <Project name="Barista Coffee Beans - Static Web Page" href="https://www.baristacoffeebeans.com/" imgsrc="./baristascreenshot.png" technologies={["NextJS","React","Bootstrap","CSS"]} />
-               
+{/*                
                 <Project name="Barista Coffee Beans - Static Web Page" href="https://www.baristacoffeebeans.com/" imgsrc="./baristascreenshot.png" technologies={["NextJS","React","Bootstrap","CSS"]} />
                 
                 <Project name="Barista Coffee Beans - Static Web Page" href="https://www.baristacoffeebeans.com/" imgsrc="./baristascreenshot.png" technologies={["NextJS","React","Bootstrap","CSS"]} />
                 
-                <Project name="Barista Coffee Beans - Static Web Page" href="https://www.baristacoffeebeans.com/" imgsrc="./baristascreenshot.png" technologies={["NextJS","React","Bootstrap","CSS"]} />
+                <Project name="Barista Coffee Beans - Static Web Page" href="https://www.baristacoffeebeans.com/" imgsrc="./baristascreenshot.png" technologies={["NextJS","React","Bootstrap","CSS"]} /> */
+}
 
            
             </div>

@@ -45,6 +45,8 @@ const About = () =>{
                         <SkillDisplay skillName="Javascript" skillPercentage="85"/>
                         <SkillDisplay skillName="ReactJS" skillPercentage="65"/>
                         <SkillDisplay skillName="Java" skillPercentage="55"/>
+                        <SkillDisplay skillName="C" skillPercentage="40" />
+                        <SkillDisplay skillName="PHP" skillPercentage="30" />
                     </div>
                 </div>
             </div>
