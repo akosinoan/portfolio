@@ -71,7 +71,8 @@ const TechnologyList = (props) =>{
     const technologyList = {
         "NextJS":{name:"NextJS", href:"https://nextjs.org/", imgsrc:"./nextjs_logo.png"},
         "React":{name:"React", href:"https://react.dev/", imgsrc:"./reactjs_logo.png"},              
-        "Bootstrap":{name:"Bootstrap", href:"https://getbootstrap.com/", imgsrc:"./bootstrap_logo.png"},  
+        "Bootstrap":{name:"Bootstrap", href:"https://getbootstrap.com/", imgsrc:"./bootstrap_logo.png"},
+        "CSS":{name:"CSS", href:"https://www.w3.org/Style/CSS/Overview.en.html",  imgsrc:"./w3_css-official.svg"  },
     }
     
     return(
@@ -84,7 +85,7 @@ const TechnologyList = (props) =>{
 const Technology = (props) =>{
     return (
         <>
-        <li className="px-2 group"><a href={props.href} target="_blank"><img src={props.imgsrc} alt={props.name}/> <span className="group-hover:visible absolute text-xs invisible  border-2 border-gray-300 rounded-3xl p-2 bg-red-900 text-white ">{props.name}</span></a></li>
+        <li className="px-2 group"><a href={props.href} target="_blank"><img className={"h-5 w-5"} src={props.imgsrc} alt={props.name}/> <span className="group-hover:visible absolute text-xs invisible  border-2 border-gray-300 rounded-3xl p-2 bg-red-900 text-white ">{props.name}</span></a></li>
         
         </>
     )
