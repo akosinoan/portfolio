@@ -50,8 +50,8 @@ const NavBar = () =>{
                                 <span className="block h-0.5 m-2 w-8 animate-pulse bg-white"></span>
                         </button>
 
-                        <div id="mobile-nav" className={ "flex flex-col w-52 py-4 ease-in transition-all duration-300 delay-75 items-center absolute border-white  z-50  bg-red-950 rounded-b-3xl border-2 shadow-xl" +
-                            (isNavOpen ? "visible z-50 top-0 right-2 opacity-100 " : "collapse -z-50 -top-10 right-[-25%] opacity-0 w-10") }> 
+                        <div id="mobile-nav" className={ "flex flex-col w-1/2 py-4 ease-in transition-all duration-300 delay-75 justify-evenly items-center absolute  border-white  z-50  bg-red-950 rounded-b-3xl border-2 shadow-xl" +
+                            (isNavOpen ? " z-50 top-0 right-0 opacity-100" : "invisible -z-50 -top-10 right-[-50%] opacity-0") }>
                             <div
                                 className="ml-24  cursor-pointer rounded-lg border-white border-2 animate-pulse"
                                 onClick={() => setIsNavOpen(false)}
@@ -69,7 +69,7 @@ const NavBar = () =>{
                                     <line x1="6" y1="6" x2="18" y2="18" />
                                 </svg>
                             </div>
-                            <ul className="flex flex-col items-center animate-pulse w-full">
+                            <ul className="flex flex-col items-center  w-full">
                                 <NavLinks links={links}  />
                             </ul>
                         </div>
