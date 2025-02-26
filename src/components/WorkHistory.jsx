@@ -19,7 +19,7 @@ const WorkHistory = () =>{
     ];
 
     return (
-        <section className="px-10 bg-gray-200 pt-20 " id="workhistory" >
+        <section className="px-10 scroll-mt-20 bg-gray-200 pt-20 " id="workhistory" >
             
             
                 <div ref={ref1} className={  `text-center   ${(isVisible1 ? "animate-fadeLeftToRight" : "opacity-0")} `}>
