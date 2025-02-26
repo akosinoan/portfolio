@@ -19,17 +19,18 @@ const WorkHistory = () =>{
     ];
 
     return (
-        <section className="bg-gray-200 scroll-mt-20 pt-20" id="workhistory" >
+        <section className="px-10 bg-gray-200 pt-20 " id="workhistory" >
             
             
-                <div ref={ref1} className={  `text-center relative  ${(isVisible1 ? "animate-fadeLeftToRight" : "opacity-0")} `}>
+                <div ref={ref1} className={  `text-center   ${(isVisible1 ? "animate-fadeLeftToRight" : "opacity-0")} `}>
                     <h2 className="text-red-900 text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
                         Work Experience
                     </h2>
                 </div>
             
-            <div ref={ref2} className={`relative ${(isVisible2 ? "animate-fadeLeftToRight" : "opacity-0")} `} >
-                <ol  className={` lg:list-none list-disc lg:grid lg:grid-cols-2 sm:flex sm:flex-col px-10  py-16 sm:py-20 items-center`}>  
+            <div ref={ref2} className={` relative ${(isVisible2 ? "animate-fadeLeftToRight" : "opacity-0")} `} >
+                
+                <ol  className={` w-full lg:list-none list-disc lg:grid lg:grid-cols-2 sm:flex sm:flex-col  py-16 sm:py-20 items-center`}>  
                     
                 {workExperiences.map((workExperience,index) => <WorkExperience key={index} imgSrc={workExperience.imgSrc} index={index} name={workExperience.name} position={workExperience.position} date={workExperience.date} desc={workExperience.desc }   duration={workExperience.duration} />)}
                 
@@ -67,16 +68,16 @@ const WorkExperience = (props) =>{
     
     return (    
         <>
-        <li className={ `border-red-900 lg:w-auto w-96  lg:bg-inherit border-l-4  text-left ${isEven ? 'lg:border-r-0 lg:text-right lg:border-0 bg-gray-100' : 'lg:border-l-4 '} `}>
+        <li className={ `border-red-900 lg:w-auto w-full  lg:bg-inherit border-l-4  text-left ${isEven ? 'lg:border-r-0 lg:text-right lg:border-0 bg-gray-100' : 'lg:border-l-4 '} `}>
             <div className={`lg:flex lg:flex-row`}>
             
             {!isEven ? <div className={"hidden lg:flex pt-10 mt-56 text-4xl italic font-extrabold text-red-900 "}> {`<<`} </div>  :''}
                 
-                <div className={`mx-4 w-full`}>
+                <div className={`px-4 w-full`}>
                     <div className={`lg:flex ${isEven ? ' lg:flex-row-reverse ' : ' lg:mt-56'} `}>
                         
                         <h4 className={`pt-6  font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl`}>
-                            <span className={`relative h-20 w-20`}> 
+                            <span className={`relative w-5`  }> 
                                 <img src={props.imgSrc || `noanworks.svg`} className= {`h-20 w-20 rounded-full sm:h-20 ${!props.imgSrc? 'opacity-10 ':''}`}  alt={ `logo` } /> 
                                 {!props.imgSrc ? <div className={`absolute left-1 top-8 text-xs bg-white`} > Not available </div> : ''}
                             </span>
