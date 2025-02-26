@@ -76,10 +76,10 @@ const WorkExperience = (props) =>{
                 <div className={`px-4 w-full`}>
                     <div className={`lg:flex ${isEven ? ' lg:flex-row-reverse ' : ' lg:mt-56'} `}>
                         
-                        <h4 className={`pt-6  font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl`}>
-                            <span className={`relative w-5`  }> 
+                        <h4 className={` relative  pt-6  font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl`}>
+                            <span className={``}> 
                                 <img src={props.imgSrc || `noanworks.svg`} className= {`h-20 w-20 rounded-full sm:h-20 ${!props.imgSrc? 'opacity-10 ':''}`}  alt={ `logo` } /> 
-                                {!props.imgSrc ? <div className={`absolute left-1 top-8 text-xs bg-white`} > Not available </div> : ''}
+                                {!props.imgSrc ? <div className={`absolute left-1 top-[50%] text-xs bg-white`} > Not available </div> : ''}
                             </span>
                         </h4>
                         
