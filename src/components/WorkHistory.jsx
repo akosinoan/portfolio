@@ -23,7 +23,7 @@ const WorkHistory = () =>{
             
             
                 <div ref={ref1} className={  `text-center   ${(isVisible1 ? "animate-fadeLeftToRight" : "opacity-0")} `}>
-                    <h2 className="text-red-900 text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
+                    <h2 className="bg-gradient-to-b from-red-900 via-red-700 to-red-300 text-transparent bg-clip-text inline-block  text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
                         Work Experience
                     </h2>
                 </div>
@@ -84,11 +84,11 @@ const WorkExperience = (props) =>{
                         </h4>
                         
                         <div className={`lg:px-1 lg:pt-8`}>
-                            <h4 className={`pt-0 font-header text-xl font-medium text-red-900 sm:text-2xl lg:text-3xl`}>
+                            <h4 className={`pt-0 font-header text-xl font-medium bg-gradient-to-b from-red-900 via-red-700 to-red-300 text-transparent bg-clip-text sm:text-2xl lg:text-3xl`}>
                                 {props.name}
                             </h4>
                             
-                            <h4 className={`italic pt-0 font-header text-sm font-medium text-red-900 leading-relaxed`}>
+                            <h4 className={`italic pt-0 font-header text-sm font-medium bg-gradient-to-b from-red-900 via-red-700 to-red-300 text-transparent bg-clip-text leading-relaxed`}>
                                 {props.position}
                             </h4>
                         </div>

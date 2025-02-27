@@ -11,7 +11,7 @@ const Portfolio = () =>{
     return(
         <section className="scroll-mt-20 py-16 md:py-20 mx-[10%] lg:mx-[20%]"  id="portfolio">
             <div ref={ref1} className={ ` relative  ${(isVisible1 ? "animate-fadeIn" : "opacity-0")} `}>
-                <h2 className="text-red-900 text-center text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
+                <h2 className="text-center text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl bg-gradient-to-b from-red-900 via-red-800 to-red-300 text-transparent bg-clip-text ">
                     Check out my Portfolio
                 </h2>
                 <h3 className="pt-6 font-header text-center text-xl font-medium text-black sm:text-2xl lg:text-3xl">
@@ -22,6 +22,7 @@ const Portfolio = () =>{
             <div className="mx-auto grid w-full grid-cols-1 gap-8 pt-12 sm:w-3/4 md:gap-10 lg:w-full lg:grid-cols-2">
             
                 <Project name="Barista Coffee Beans - Static Web Page" href="https://www.baristacoffeebeans.com/" imgsrc="./baristascreenshot.png" technologies={["NextJS","React","Bootstrap","CSS"]} />
+                <Project name="One Source Marketing Services - Static Web Page" href="https://onesource-pied.vercel.app/" imgsrc="./onesource.png" technologies={["NextJS","React","Shadcn","TailwindCSS"]} />
 {/*                
                 <Project name="Barista Coffee Beans - Static Web Page" href="https://www.baristacoffeebeans.com/" imgsrc="./baristascreenshot.png" technologies={["NextJS","React","Bootstrap","CSS"]} />
                 
@@ -46,11 +47,11 @@ const Project = (props) =>{
          <div ref={ref} className={ ` relative  ${(isVisible ? "animate-fadeIn" : "opacity-0")} `}>
             <div className="mx-auto transform transition-all hover:scale-105 md:mx-0 py-2">          
                 <a href={props.href} target="_blank" >
-                    <h3 className="font-bold text-red-900 sm:text-md lg:text-lg">{props.name}</h3>
-                    <img src={props.imgsrc} className="w-full lg:h-[70%] shadow z-10" alt={props.name} />
+                    <h3 className="font-bold bg-gradient-to-b from-red-900 via-red-600 to-red-300 text-transparent bg-clip-text sm:text-md lg:text-lg">{props.name}</h3>
+                    <img src={props.imgsrc} className="w-full h-96 border-4 rounded-lg  shadow-2xl z-10" alt={props.name} />
                 </a>
-                <div className="flex flex-col">
-                    <h4 className="font-medium text-red-900 sm:text-md lg:text-lg">
+                <div className="pt-4 flex flex-col">
+                    <h4 className="font-medium sm:text-md lg:text-lg bg-gradient-to-b from-red-950 via-red-700 to-red-300 text-transparent bg-clip-text">
                         Technologies used:
                     </h4>
                     <ul className="flex">
@@ -72,8 +73,11 @@ const TechnologyList = (props) =>{
         "NextJS":{name:"NextJS", href:"https://nextjs.org/", imgsrc:"./nextjs_logo.png"},
         "React":{name:"React", href:"https://react.dev/", imgsrc:"./reactjs_logo.png"},              
         "Bootstrap":{name:"Bootstrap", href:"https://getbootstrap.com/", imgsrc:"./bootstrap_logo.png"},
-        "CSS":{name:"CSS", href:"https://www.w3.org/Style/CSS/Overview.en.html",  imgsrc:"./w3_css-official.svg"  },
-    }
+        "CSS":{name:"CSS", href:"https://www.w3.org/Style/CSS/Overview.en.html",  imgsrc:"./w3_css-official.svg"},
+        "Shadcn":{name:"Shadcn", href:"https://ui.shadcn.com/",  imgsrc:"./shadcn_logo.png"},
+        "TailwindCSS":{name:"TailwindCSS", href:"https://tailwindcss.com/",  imgsrc:"./tailwindcss.svg"} ,
+    
+}
     
     return(
         <>

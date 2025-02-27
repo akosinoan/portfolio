@@ -18,7 +18,7 @@ const About = () =>{
                 <div className=" lg:w-[40%] text-center  lg:text-left">
                 
                     <div ref={ref1} className={ `relative  ${(isVisible1 ? "animate-fadeLeftToRight" : "opacity-0")} `}>
-                        <h2 className="text-red-900 text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
+                        <h2 className=" text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl bg-gradient-to-b from-red-950 via-red-800 to-red-300 text-transparent bg-clip-text inline-block ">
                             Who am I?
                         </h2>
                         <h4 className="pt-6 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
@@ -38,7 +38,7 @@ const About = () =>{
                 </div> 
                 <div className=" pl-0 pt-10 w-[50%] lg:w-[20%] lg:pl-12 lg:pt-0">
                     <div ref={ref3} className={ `relative  ${(isVisible3 ? "lg:animate-fadeRightToLeft animate-fadeLeftToRight" : "opacity-0")} `}>
-                        <h4 className="pt-6 font-header text-center text-xl font-medium text-red-900 sm:text-2xl lg:text-3xl">
+                        <h4 className="pt-6 font-header text-center text-xl font-medium sm:text-2xl lg:text-3xl bg-gradient-to-b from-red-950 via-red-800 to-red-300 text-transparent bg-clip-text  ">
                             Skills
                         </h4>
                         <SkillDisplay skillName="HTML & CSS" skillPercentage="80" />
@@ -67,7 +67,7 @@ const SkillDisplay = (props) =>{
             <h3 className=" text-3xl font-bold text-primary">{props.skillPercentage}%</h3>
             </div>
             <div className="mt-2 h-3 w-full rounded-full bg-gray-300">
-            <div className={`h-3 rounded-full bg-red-900`} style={{width: props.skillPercentage + `%`}}></div>
+            <div className={`h-3 rounded-full bg-red-900 bg-gradient-to-r from-red-950 via-red-800 to-red-300 text-transparent `} style={{width: props.skillPercentage + `%`}}></div>
             </div>
         </div>
 
