@@ -26,8 +26,8 @@ const About = () =>{
                         </h4>
                     </div>
                     <div ref={ref2} className={ `relative  ${(isVisible2 ? "animate-fadeLeftToRight" : "opacity-0")} `}>
-                        <p className="pt-6 font-body leading-relaxed text-gray-400 ">
-                        I'm motivated software developer who has three years of professional web development experience and four years of military service in aviation maintenance. 
+                        <p className="pt-6 font-body leading-relaxed text-red-500 ">
+                        I'm a motivated software developer who has three years of professional web development experience and four years of military service in aviation maintenance. 
                         Efficient in learning new knowledge while maintaining attention to details. Equally capable of working alone or as a member of a team, 
                         and comfortable exercising initiative and adapting to situations effortlessly.
                         <br /><br/>
