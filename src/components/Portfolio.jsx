@@ -12,13 +12,13 @@ const PROJECTS = [
   {
     name: "Barista Coffee Beans",
     href: "https://www.baristacoffeebeans.com/",
-    imgsrc: "./baristascreenshot.png",
+    imgsrc: "./baristascreenshot2.png",
     technologies: ["NextJS", "React", "Bootstrap", "CSS"],
   },
   {
     name: "One Source Marketing Services",
     href: "https://onesourcemarketing.org/",
-    imgsrc: "./onesource.png",
+    imgsrc: "./onesource2.png",
     technologies: ["Vite", "React", "Shadcn", "TailwindCSS"],
   },
 ];
@@ -235,8 +235,12 @@ const TechnologyList = ({ technologies }) => {
       href: "https://tailwindcss.com/",
       imgsrc: "./tailwindcss.svg",
     },
-    Vite:     { href: "https://vite.dev/",       imgsrc: "./vite_logo.png" },
-    Supabase: { href: "https://supabase.com/",   imgsrc: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" },
+    Vite: { href: "https://vite.dev/", imgsrc: "./vite_logo.png" },
+    Supabase: {
+      href: "https://supabase.com/",
+      imgsrc:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
+    },
   };
 
   return technologies.map((tech, i) => {
