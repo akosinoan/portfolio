@@ -9,7 +9,7 @@ const App =() =>{
     
   return (
    
-    <div className='max-h flex flex-col'>
+    <div className='min-h-screen flex flex-col'>
       <ActiveNavContext.Provider value={[activeNav , setActiveNav]}  >
         <Header />
         <MainComponent />
