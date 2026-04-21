@@ -1,5 +1,7 @@
 
 import NavBar from './NavBar'
+import profPic from '../assets/profpic2.jpg'
+import yosemiteBg from '../assets/yosemite.jpg'
 
 const Header = () =>{
    
@@ -12,13 +14,13 @@ const Header = () =>{
 
             <div className="mt-16 bg-red-950 bg-opacity-80 relative">
                 <div className="absolute h-full w-full -z-50">
-                        <img src="./yosemite.jpg" className=" h-full w-full " alt="yosemite-background" />
+                        <img src={yosemiteBg} className=" h-full w-full " alt="yosemite-background" />
 
                     </div>
                 <div className=" relative z-30 pt-20 pb-12 sm:pt-56 sm:pb-48 lg:pt-64 lg:pb-48">
                     <div className="flex flex-col items-center justify-center lg:flex-row">
                         <div className="rounded-full border-4 sm:border-8 shadow-xl">
-                        <img src="./profpic2.jpg" className="h-32 w-32 sm:h-48 sm:w-48 rounded-full" alt="author" />
+                        <img src={profPic} className="h-32 w-32 sm:h-48 sm:w-48 rounded-full" alt="author" />
                         </div>
                         <div className="pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
                         <h1 className="text-center font-serif text-4xl text-white sm:text-left sm:text-5xl md:text-6xl">

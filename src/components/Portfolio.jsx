@@ -1,24 +1,27 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import useIsVisible from "../util/useIsVisible";
+import comptiaReviewerImg from "../assets/comptiareviewer.png";
+import baristaImg from "../assets/baristascreenshot.png";
+import oneSourceImg from "../assets/onesource.png";
 
 const PROJECTS = [
   {
     name: "CompTIA Reviewer",
     href: "https://akosinoan.github.io/comptia_reviewer_flashcard/",
-    imgsrc: "./comptiareviewer.png",
+    imgsrc: comptiaReviewerImg,
     technologies: ["React", "Vite", "TailwindCSS", "Supabase"],
   },
   {
     name: "Barista Coffee Beans",
     href: "https://www.baristacoffeebeans.com/",
-    imgsrc: "./baristascreenshot2.png",
+    imgsrc: baristaImg,
     technologies: ["NextJS", "React", "Bootstrap", "CSS"],
   },
   {
     name: "One Source Marketing Services",
     href: "https://onesourcemarketing.org/",
-    imgsrc: "./onesource2.png",
+    imgsrc: oneSourceImg,
     technologies: ["Vite", "React", "Shadcn", "TailwindCSS"],
   },
 ];
