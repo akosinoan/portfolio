@@ -3,6 +3,19 @@ import { motion, useInView } from "framer-motion";
 
 const education = [
   {
+    school: "My Computer Career",
+    degree: "Cyber Warrior Program",
+    field: "Cybersecurity",
+    status: "Program",
+    date: "Mar 2026 – Jun 2026",
+    location: "Online",
+    featured: false,
+    imgSrc: "./mycc_logo.png",
+    gradient: "from-red-700 via-rose-500 to-orange-400",
+    dotBg: "bg-gradient-to-br from-red-700 to-orange-500",
+    accentBorder: "border-red-500/40",
+  },
+  {
     school: "De La Salle University Manila -  Laguna Campus",
     degree: "Bachelor of Science in Computer Science",
     field: "Computer Science",
@@ -45,13 +58,43 @@ const education = [
 
 const certifications = [
   {
-    name: "CompTIA A+ ce Certification",
+    name: "CompTIA Certifications",
     issuer: "CompTIA",
-    date: "2026",
-    credentialUrl:
-      "https://www.credly.com/badges/931cd16e-ee1b-41b1-a550-a54d04513f27/linked_in_profile",
     icon: "https://cdn.simpleicons.org/comptia/C8202F",
     gradient: "from-red-700 via-red-500 to-orange-400",
+    items: [
+      {
+        name: "A+ ce",
+        date: "Apr 2026",
+        credentialUrl:
+          "https://www.credly.com/badges/843606a5-6862-46eb-abe2-7116c5c49d66/public_url",
+      },
+      {
+        name: "Network+ ce",
+        date: "May 2026",
+        credentialUrl:
+          "https://www.credly.com/badges/fc736661-52c8-47ec-aabb-544860eb8e69/public_url",
+      },
+      {
+        name: "Security+ ce",
+        date: "May 2026",
+        credentialUrl:
+          "https://www.credly.com/badges/19345389-7111-43d3-b932-3f28b4a4f20f/public_url",
+      },
+      {
+        name: "IT Operations Specialist – CIOS",
+        date: "May 2026",
+        credentialUrl:
+          "https://www.credly.com/badges/d08afa7c-27e6-4a86-9c65-235d7d3ed135/public_url",
+      },
+      {
+        name: "Secure Infrastructure Specialist – CSIS",
+        date: "May 2026",
+        credentialUrl:
+          "https://www.credly.com/badges/7a0b7da8-41db-4da5-b01f-eb5ea81c4a8e/public_url",
+      },
+      { name: "CySA+", status: "In Progress" },
+    ],
   },
   {
     name: "Database Design and Basic SQL in PostgreSQL",
@@ -393,31 +436,58 @@ const CertCard = ({ cert, index }) => {
           </div>
         </div>
 
-        <div className="flex items-center justify-between text-xs text-gray-500">
-          <span>📅 {cert.date}</span>
-          {cert.credentialUrl && (
-            <a
-              href={cert.credentialUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-gray-500 hover:text-red-700 transition-colors"
-            >
-              Verify
-              <svg
-                className="w-3 h-3"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
+        {cert.items ? (
+          <ul className="space-y-2">
+            {cert.items.map((item, i) => (
+              <li
+                key={i}
+                className="flex items-center justify-between gap-2 text-xs text-gray-600"
               >
-                <path d="M7 17L17 7M7 7h10v10" />
-              </svg>
-            </a>
-          )}
-        </div>
+                <span className="font-medium text-gray-700">{item.name}</span>
+                <CertMeta meta={item} />
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <div className="flex items-center justify-between text-xs text-gray-500">
+            <CertMeta meta={cert} />
+          </div>
+        )}
       </div>
     </motion.div>
   );
 };
+
+const CertMeta = ({ meta }) => (
+  <span className="flex items-center gap-2 text-gray-500 whitespace-nowrap">
+    {meta.status ? (
+      <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-amber-700">
+        <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
+        {meta.status}
+      </span>
+    ) : (
+      <span>📅 {meta.date}</span>
+    )}
+    {meta.credentialUrl && (
+      <a
+        href={meta.credentialUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-1 text-gray-500 hover:text-red-700 transition-colors"
+      >
+        Verify
+        <svg
+          className="w-3 h-3"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+        >
+          <path d="M7 17L17 7M7 7h10v10" />
+        </svg>
+      </a>
+    )}
+  </span>
+);
 
 export default Education;
