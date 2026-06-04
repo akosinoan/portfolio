@@ -1,13 +1,14 @@
-import { Nav } from "@/components/layout/Nav";
-import { Footer } from "@/components/layout/Footer";
-import { Hero } from "@/components/sections/Hero";
-import { TrustBar } from "@/components/sections/TrustBar";
-import { Projects } from "@/components/sections/Projects";
-import { TechStack } from "@/components/sections/TechStack";
-import { HowIThink } from "@/components/sections/HowIThink";
-import { Timeline } from "@/components/sections/Timeline";
-import { GitHubProof } from "@/components/sections/GitHubProof";
-import { FinalCTA } from "@/components/sections/FinalCTA";
+import { Nav, Footer } from "@/components/layout";
+import {
+  FinalCTA,
+  GitHubProof,
+  Hero,
+  HowIThink,
+  Projects,
+  TechStack,
+  Timeline,
+  TrustBar,
+} from "@/components/sections";
 
 export default function App() {
   return (
