@@ -1,5 +1,6 @@
 import { useRef, useContext } from "react";
 import useIsVisible from "../util/useIsVisible";
+import ImageWithLoader from "./ImageWithLoader";
 import { ActiveNavContext } from "./NavBar";
 
 const D = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
@@ -227,13 +228,13 @@ const About = () => {
                     title={b.name}
                     className="group flex flex-col items-center w-20 sm:w-24 hover:scale-105 transition-transform duration-200"
                   >
-                    <img
+                    <ImageWithLoader
                       src={b.img}
                       alt={b.name}
-                      className="w-16 h-16 sm:w-20 sm:h-20 object-contain transition-all duration-200 group-hover:[filter:drop-shadow(0_0_10px_rgba(220,38,38,0.65))]"
-                      onError={(e) => {
-                        e.currentTarget.style.display = "none";
-                      }}
+                      wrapperClassName="w-16 h-16 sm:w-20 sm:h-20"
+                      className="w-full h-full object-contain transition-all duration-200 group-hover:[filter:drop-shadow(0_0_10px_rgba(220,38,38,0.65))]"
+                      spinnerClassName="h-6 w-6 border-2"
+                      placeholderClassName="bg-gray-200"
                     />
                     <span className="mt-1.5 text-center text-[10px] font-medium leading-tight text-gray-600">
                       {b.label ?? b.name.replace(/^CompTIA\s+/, "")}

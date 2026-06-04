@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import useIsVisible from "../util/useIsVisible";
+import ImageWithLoader from "./ImageWithLoader";
 import comptiaReviewerImg from "../assets/comptiareviewer.png";
 import baristaImg from "../assets/baristascreenshot.png";
 import oneSourceImg from "../assets/onesource.png";
@@ -114,11 +115,12 @@ const ProjectCard = ({ project, featured }) => {
           featured ? "lg:w-3/5" : ""
         }`}
       >
-        <img
+        <ImageWithLoader
           src={project.ogImage ?? project.imgsrc}
           alt={project.name}
           loading="lazy"
           onError={handleImgError(project)}
+          wrapperClassName="absolute inset-0 h-full w-full"
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-red-950/30 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />

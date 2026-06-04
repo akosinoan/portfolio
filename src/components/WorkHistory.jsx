@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
+import ImageWithLoader from './ImageWithLoader';
 
 const workExperiences = [
   {
@@ -229,10 +230,13 @@ const CenterDot = ({ experience, inView, size = "lg" }) => {
         transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
       />
       {experience.imgSrc ? (
-        <img
+        <ImageWithLoader
           src={experience.imgSrc}
           alt={experience.name}
-          className="w-full h-full object-cover rounded-full relative z-10"
+          wrapperClassName="w-full h-full rounded-full relative z-10"
+          className="w-full h-full object-cover rounded-full"
+          spinnerClassName="h-5 w-5 border-2"
+          placeholderClassName="bg-white"
         />
       ) : (
         <span className="text-white font-bold text-sm relative z-10">

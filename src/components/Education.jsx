@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import ImageWithLoader from "./ImageWithLoader";
 
 const education = [
   {
@@ -292,13 +293,13 @@ const CenterDot = ({ entry, inView, size = "lg" }) => {
       />
       {entry.imgSrc ? (
         <div className="relative z-10 w-full h-full rounded-full bg-white flex items-center justify-center p-1.5 overflow-hidden">
-          <img
+          <ImageWithLoader
             src={entry.imgSrc}
             alt={entry.school}
+            wrapperClassName="w-full h-full"
             className="w-full h-full object-contain"
-            onError={(e) => {
-              e.currentTarget.style.display = "none";
-            }}
+            spinnerClassName="h-4 w-4 border-2"
+            placeholderClassName="bg-white"
           />
         </div>
       ) : isFeatured ? (
@@ -414,13 +415,12 @@ const CertCard = ({ cert, index }) => {
       <div className="p-5">
         <div className="flex items-start gap-3 mb-3">
           {cert.icon ? (
-            <img
+            <ImageWithLoader
               src={cert.icon}
               alt={cert.issuer}
-              className="w-10 h-10 flex-shrink-0 rounded-md"
-              onError={(e) => {
-                e.currentTarget.style.display = "none";
-              }}
+              wrapperClassName="w-10 h-10 flex-shrink-0 rounded-md"
+              className="w-full h-full object-cover"
+              spinnerClassName="h-4 w-4 border-2"
             />
           ) : (
             <div
