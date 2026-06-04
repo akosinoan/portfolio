@@ -84,19 +84,25 @@ const COMPTIA_BADGES = [
     name: "CompTIA A+ ce",
     label: "A+",
     img: "https://images.credly.com/images/f6d62c5d-1e1d-4de6-92ee-8dc8c80b1c7b/blob",
-    url: "https://www.credly.com/badges/843606a5-6862-46eb-abe2-7116c5c49d66/public_url",
+    url: "https://www.credly.com/badges/d3bea4a9-9ce7-49d2-8f10-f822c4f42304/public_url",
   },
   {
     name: "CompTIA Network+ ce",
     label: "Network+",
     img: "https://images.credly.com/images/c70ba73e-3c8a-46fa-9d60-4a9af94ad662/blob",
-    url: "https://www.credly.com/badges/fc736661-52c8-47ec-aabb-544860eb8e69/public_url",
+    url: "https://www.credly.com/badges/9533f8ac-1789-4add-9b2c-f1cc45558f99/public_url",
   },
   {
     name: "CompTIA Security+ ce",
     label: "Security+",
     img: "https://images.credly.com/images/80d8a06a-c384-42bf-ad36-db81bce5adce/blob",
-    url: "https://www.credly.com/badges/19345389-7111-43d3-b932-3f28b4a4f20f/public_url",
+    url: "https://www.credly.com/badges/0418e0a4-6a58-499d-a8f5-6e7636ea3135/public_url",
+  },
+  {
+    name: "CompTIA CySA+ ce",
+    label: "CySA+",
+    img: "https://images.credly.com/images/dcd99b5b-da24-40a6-9364-62126d590c37/blob",
+    url: "https://www.credly.com/badges/8b581ab1-aad9-4b40-930a-e868064b74ef/public_url",
   },
   {
     name: "CompTIA IT Operations Specialist – CIOS",
@@ -219,12 +225,12 @@ const About = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     title={b.name}
-                    className="flex flex-col items-center w-20 sm:w-24 hover:scale-105 transition-transform duration-200"
+                    className="group flex flex-col items-center w-20 sm:w-24 hover:scale-105 transition-transform duration-200"
                   >
                     <img
                       src={b.img}
                       alt={b.name}
-                      className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+                      className="w-16 h-16 sm:w-20 sm:h-20 object-contain transition-all duration-200 group-hover:[filter:drop-shadow(0_0_10px_rgba(220,38,38,0.65))]"
                       onError={(e) => {
                         e.currentTarget.style.display = "none";
                       }}

@@ -67,19 +67,19 @@ const certifications = [
         name: "A+ ce",
         date: "Apr 2026",
         credentialUrl:
-          "https://www.credly.com/badges/843606a5-6862-46eb-abe2-7116c5c49d66/public_url",
+          "https://www.credly.com/badges/d3bea4a9-9ce7-49d2-8f10-f822c4f42304/public_url",
       },
       {
         name: "Network+ ce",
         date: "May 2026",
         credentialUrl:
-          "https://www.credly.com/badges/fc736661-52c8-47ec-aabb-544860eb8e69/public_url",
+          "https://www.credly.com/badges/9533f8ac-1789-4add-9b2c-f1cc45558f99/public_url",
       },
       {
         name: "Security+ ce",
         date: "May 2026",
         credentialUrl:
-          "https://www.credly.com/badges/19345389-7111-43d3-b932-3f28b4a4f20f/public_url",
+          "https://www.credly.com/badges/0418e0a4-6a58-499d-a8f5-6e7636ea3135/public_url",
       },
       {
         name: "IT Operations Specialist – CIOS",
@@ -93,7 +93,12 @@ const certifications = [
         credentialUrl:
           "https://www.credly.com/badges/7a0b7da8-41db-4da5-b01f-eb5ea81c4a8e/public_url",
       },
-      { name: "CySA+", status: "In Progress" },
+      {
+        name: "CySA+",
+        date: "Jun 2026",
+        credentialUrl:
+          "https://www.credly.com/badges/8b581ab1-aad9-4b40-930a-e868064b74ef/public_url",
+      },
     ],
   },
   {
